@@ -17,8 +17,8 @@ with sr.Microphone() as source:
             print("You said: {}".format(text))
             chrome_driver=webdriver.Chrome()
             chrome_driver.get('https://www.'+text+'.com')
-            #time.sleep(5)
-            #chrome_driver.close()
+            time.sleep(5)
+            chrome_driver.close()
         else:
             print("You said nothing")
             chrome_driver.close()
